@@ -1,0 +1,19 @@
+#########################
+#This is bash script to generate auto report os the services.
+#list aws ec2 instances
+#list aws lambda 
+#list aws s3 bucket 
+#list aws IAM 
+##########################
+# author : amir bangash
+# date : 24 april
+# version : draft / v2
+
+# put the script in debug mode
+set -x
+#list aws ec2 instances
+aws describe-instances > awsreport
+echo "print the aws list"
+#list aws lambda 
+#list aws s3 bucket 
+#list aws IAM 
