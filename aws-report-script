@@ -12,8 +12,14 @@
 # put the script in debug mode
 set -x
 #list aws ec2 instances
-aws describe-instances > awsreport
-echo "print the aws list"
+aws describe-instances | jq '.Reservations[].Instances[].InstanceId'
+echo "print the aws ec2 instances list"
 #list aws lambda 
+aws lambda list-functions
+echo "print the aws lambda list"
 #list aws s3 bucket 
-#list aws IAM 
+aws s3 ls
+echo "print the aws s3 bucket list"
+#list aws IAM users 
+echo "print the aws iam user list"
+aws iam list-users
